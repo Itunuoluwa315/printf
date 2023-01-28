@@ -27,7 +27,7 @@ int _printf(const char *format, ...)
 			if (buff_ind == BUFF_SIZE)
 				print_buffer(buffer, &buff_ind);
 			/* write(1, &format[i], 1);*/
-			printed_chars++;
+			printed_char++;
 		}
 		else
 		{
@@ -41,7 +41,7 @@ int _printf(const char *format, ...)
 					flags, width, precision, size);
 			if (printed == -1)
 				return (-1);
-			printed_chars += printed;
+			printed_char += printed;
 		}
 	}
 
@@ -49,7 +49,7 @@ int _printf(const char *format, ...)
 
 	va_end(list);
 
-	return (printed_chars);
+	return (printed_char);
 }
 
 /**
